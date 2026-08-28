@@ -37,6 +37,7 @@ function Box({
       </span>
       <span className="org-name">{bot.name}</span>
       <span className="org-blurb">{bot.blurb}</span>
+      {!bot.seat ? <span className="org-computer">Computer online</span> : null}
     </>
   );
 
@@ -59,11 +60,11 @@ export function RosterChart() {
 
   return (
     <section id="roster" className="roster">
-      <h2>A background team for every sales rep</h2>
+      <h2>Three agents. Three computers. Clear handoffs.</h2>
       <p className="section-lede">
-        The work itself is the trigger. A call starts, an email lands, or an
-        account enters the list — and the right agent picks it up. They keep
-        working after the laptop closes. Drafts stay drafts until the rep sends.
+        A brief lands, a delivery field changes, or a planning request enters
+        the queue. The right agent opens its computer and starts the routine.
+        People review the finished artifact before anything moves on.
       </p>
 
       <div className="org" role="tree">

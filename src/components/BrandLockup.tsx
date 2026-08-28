@@ -8,9 +8,9 @@ export function BrandLockup({
     <div className={`brand-lockup brand-lockup-${size}`}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/brand/datadog-wordmark.svg"
-        alt="Datadog"
-        className="brand-dd"
+        src="https://webinfra-cdn.apps.nielsen.com/infra/latest/node_modules/@nielsen-media/ui-assets/themes/main/images/nielsen/logo-2021.svg"
+        alt="Nielsen"
+        className="brand-nielsen"
       />
       <span className="brand-times" aria-hidden>
         ×

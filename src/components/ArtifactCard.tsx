@@ -1,11 +1,19 @@
 import type { Artifact } from "@/data/types";
-import { HeardSlide } from "./HeardSlide";
 
 export function ArtifactCard({ artifact }: { artifact: Artifact }) {
   switch (artifact.kind) {
-      case "slides":
+    case "slides":
       return (
-        <HeardSlide slides={artifact.cards} size="sm" />
+        <div className="art art-doc">
+          <p className="art-kicker">Completed slides</p>
+          <h3 className="art-title">{artifact.title}</h3>
+          {artifact.cards.map((card) => (
+            <div key={card.n} className="art-block">
+              <p className="art-label">{card.title}</p>
+              <p>{card.body}</p>
+            </div>
+          ))}
+        </div>
       );
     case "one-pager":
       return (
@@ -23,7 +31,7 @@ export function ArtifactCard({ artifact }: { artifact: Artifact }) {
     case "packet":
       return (
         <div className="art art-doc">
-          <p className="art-kicker">Champion packet</p>
+          <p className="art-kicker">Completed packet</p>
           <h3 className="art-title">{artifact.title}</h3>
           {artifact.fields.map((field) => (
             <div key={field.label} className="art-block">

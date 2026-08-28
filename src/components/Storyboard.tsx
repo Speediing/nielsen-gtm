@@ -181,8 +181,8 @@ function LiveVisual({ visual }: { visual: StoryVisual }) {
       return (
         <div className="story-ui story-email-ui" aria-hidden>
           <header className="story-ui-bar">
-            <strong>Inbox</strong>
-            <span>5:27 AM</span>
+            <strong>Workspace event</strong>
+            <span>New input</span>
           </header>
           <div className="story-email-body">
             <span className="story-avatar">JH</span>
@@ -193,7 +193,7 @@ function LiveVisual({ visual }: { visual: StoryVisual }) {
           </div>
           <footer>
             <strong>{visual.questions}</strong>
-            questions need answers
+            item{visual.questions === 1 ? "" : "s"} to check
           </footer>
         </div>
       );
@@ -201,7 +201,7 @@ function LiveVisual({ visual }: { visual: StoryVisual }) {
       return (
         <div className="story-ui story-answers-ui" aria-hidden>
           <header className="story-ui-bar">
-            <strong>Grok checked the sources</strong>
+            <strong>Agent checked the sources</strong>
             <span>{visual.status}</span>
           </header>
           <ul>
@@ -245,7 +245,7 @@ function LiveVisual({ visual }: { visual: StoryVisual }) {
         <div className="story-ui story-research-ui" aria-hidden>
           <header className="story-ui-bar">
             <strong>{visual.account}</strong>
-            <span>Researching</span>
+            <span>Tracing sources</span>
           </header>
           <div className="story-source-orbit">
             <strong>{visual.signal}</strong>
@@ -253,15 +253,15 @@ function LiveVisual({ visual }: { visual: StoryVisual }) {
               <span key={source}>{source}</span>
             ))}
           </div>
-          <footer>Public evidence found</footer>
+          <footer>Approved inputs open</footer>
         </div>
       );
     case "three-why":
       return (
         <div className="story-ui story-why-ui" aria-hidden>
           <header className="story-ui-bar">
-            <strong>Account hypothesis</strong>
-            <span>Built from evidence</span>
+            <strong>Field trace</strong>
+            <span>Built from source files</span>
           </header>
           <ol>
             {visual.items.map((item) => (
