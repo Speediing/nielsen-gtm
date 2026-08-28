@@ -1,7 +1,8 @@
 import { CompareTable } from "@/components/CompareTable";
+import { HeroDemo } from "@/components/HeroDemo";
 import { HeroTelemetry } from "@/components/HeroTelemetry";
-import { JobDemo } from "@/components/JobDemo";
 import { JobSection } from "@/components/JobSection";
+import { QuoteWall } from "@/components/QuoteWall";
 import { RosterChart } from "@/components/RosterChart";
 import { SiteNav } from "@/components/SiteNav";
 import { JOBS } from "@/data/jobs";
@@ -23,27 +24,7 @@ export default function HomePage() {
         <div className="report-hero">
           <HeroTelemetry />
           <section className="hero">
-            <div>
-              <p className="eyebrow">Nielsen x SpaceXAI</p>
-              <h1>A fleet that keeps media work moving.</h1>
-              <p className="hero-intro">
-                Each agent has a computer, follows a clear routine, and brings
-                finished work back for review. The examples below are
-                fictional and use public Nielsen media lines of business.
-              </p>
-            </div>
-          </section>
-
-          <section className="hero-demo-band" aria-label="Sample agent workspace">
-            <div className="hero-demo-copy">
-              <p className="eyebrow">Agent workspace</p>
-              <h2>Chat on the left. Computer on the right.</h2>
-              <p>
-                Signal checks the brief, works across the open sources, and
-                returns a completed readiness sheet.
-              </p>
-            </div>
-            <JobDemo job={JOBS[0]} />
+            <HeroDemo />
           </section>
 
           <RosterChart />
@@ -88,6 +69,7 @@ export default function HomePage() {
 
       <div className="report">
         <CompareTable />
+        <QuoteWall />
       </div>
 
       <footer className="site-footer">
